@@ -1,17 +1,18 @@
-#define macros
-EXECUTABLE_NAME = goodbye.exe
+CC=cl
+CCFLAGS=/Wall /Ox /MD
+EXE=goodbye.exe
 
-$(EXECUTABLE_NAME) :
+$(EXE):
  @echo.
  @echo Building...
- cl /Wall /Ox /MD goodbye.c
+ $(CC) $(CCFLAGS) goodbye.c
  @echo Building done!
 
-cleanup:
+clean:
  @echo.
- @echo Cleanup...
+ @echo Cleaning started...
  del goodbye.obj
- del $(EXECUTABLE_NAME)
- @echo Cleanup done!
+ del $(EXE)
+ @echo Cleaning done!
 
-all: cleanup $(EXECUTABLE_NAME)
+all: clean $(EXE)
