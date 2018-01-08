@@ -2,4 +2,4 @@
 
 using namespace std;
 
-void main() { cout << "Goodbye, world, from Visual C++!" << endl; }
+int main() { cout << "Goodbye, world, from Visual C++!" << endl; }
